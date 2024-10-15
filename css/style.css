@@ -1,0 +1,243 @@
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #e74c3c;
+  --accent-color: #3498db;
+  --background-color: #ecf0f1;
+  --text-color: #34495e;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.logo h1 {
+  font-size: 1.5rem;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 1rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: var(--accent-color);
+}
+
+main {
+  max-width: 1200px;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.search-filter {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+#search-bar,
+#genre-filter {
+  flex: 1;
+  padding: 0.5rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.book-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+}
+
+.book-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.book-info {
+  padding: 1rem;
+}
+
+.book-info h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.book-info p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.wishlist-btn {
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.wishlist-btn:hover {
+  background-color: #c0392b;
+}
+
+#pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.page-btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0 0.25rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.page-btn:hover {
+  background-color: var(--accent-color);
+}
+
+.hidden {
+  display: none;
+}
+
+/* Book Details Page Styles */
+#book-details-page {
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+#book-details {
+  background-color: white;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#book-details img {
+  max-width: 300px;
+  display: block;
+  margin: 0 auto 1rem;
+}
+
+#book-details h2 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+#book-details p {
+  margin-bottom: 0.5rem;
+}
+
+#book-details ul {
+  margin-left: 1.5rem;
+  list-style: disc;
+}
+
+/* Back Button Styling */
+#back-to-list {
+  display: block;
+  margin: 2rem auto 0;
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#back-to-list:hover {
+  background-color: var(--accent-color);
+}
+
+#loading {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+
+.page-btn.active {
+  background-color: #007bff;
+  color: white;
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  /* position: fixed;
+  bottom: 0; */
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .search-filter {
+    flex-direction: column;
+  }
+
+  .book-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

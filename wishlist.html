@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BookWorm - My Wishlist</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="bookworm-logo.svg" alt="BookWorm Logo" />
+        <h1>BookWorm</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="wishlist.html" class="active">Wishlist</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="wishlist-page">
+        <h2>My Wishlist</h2>
+        <div id="wishlist-books" class="book-grid"></div>
+      </section>
+      <div id="loading" class="hidden">Loading...</div>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 BookWorm. All rights reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

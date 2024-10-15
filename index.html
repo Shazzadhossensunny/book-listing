@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BookWorm - Your Literary Adventure</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="bookworm-logo.svg" alt="BookWorm Logo" />
+        <h1>BookWorm</h1>
+      </div>
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html" class="nav-link" data-page="home">Home</a>
+          </li>
+          <li>
+            <a href="wishlist.html" class="nav-link" data-page="wishlist"
+              >Wishlist</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Home Page Section -->
+      <section id="home-page">
+        <div class="search-filter">
+          <input type="text" id="search-bar" placeholder="Search books..." />
+          <select id="genre-filter">
+            <option value="">All Genres</option>
+            <!-- Additional genre options will be added dynamically -->
+          </select>
+        </div>
+        <div id="book-list" class="book-grid"></div>
+        <div id="pagination"></div>
+      </section>
+
+      <!-- Book Details Page Section -->
+      <section id="book-details-page" class="hidden">
+        <div id="book-details"></div>
+        <button id="back-to-list">Back to List</button>
+      </section>
+
+      <div id="loading" class="hidden">Loading...</div>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 BookWorm. All rights reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
