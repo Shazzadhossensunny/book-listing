@@ -19,13 +19,26 @@ body {
   background-color: var(--background-color);
 }
 
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0px auto;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 header {
   background-color: var(--primary-color);
   color: white;
   padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .logo {
@@ -61,10 +74,8 @@ nav ul li a:hover {
   color: var(--accent-color);
 }
 
-main {
-  max-width: 1200px;
-  width: 100%;
-  margin: 2rem auto;
+.main-section {
+  margin: 2rem 0;
   padding: 0 1rem;
 }
 
@@ -230,6 +241,18 @@ footer {
   /* position: fixed;
   bottom: 0; */
   width: 100%;
+}
+
+.back__btn {
+  padding: 8px 18px;
+  background: #2c3e50;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-top: 20px;
+  display: inline-block;
 }
 
 @media (max-width: 768px) {

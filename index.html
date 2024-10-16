@@ -12,45 +12,49 @@
   </head>
   <body>
     <header>
-      <div class="logo">
-        <img src="bookworm-logo.svg" alt="BookWorm Logo" />
-        <h1>BookWorm</h1>
+      <div class="container flex">
+        <div class="logo">
+          <img src="bookworm-logo.svg" alt="BookWorm Logo" />
+          <h1>BookWorm</h1>
+        </div>
+        <nav>
+          <ul>
+            <li>
+              <a href="index.html" class="nav-link" data-page="home">Home</a>
+            </li>
+            <li>
+              <a href="wishlist.html" class="nav-link" data-page="wishlist"
+                >Wishlist</a
+              >
+            </li>
+          </ul>
+        </nav>
       </div>
-      <nav>
-        <ul>
-          <li>
-            <a href="index.html" class="nav-link" data-page="home">Home</a>
-          </li>
-          <li>
-            <a href="wishlist.html" class="nav-link" data-page="wishlist"
-              >Wishlist</a
-            >
-          </li>
-        </ul>
-      </nav>
     </header>
 
-    <main>
-      <!-- Home Page Section -->
-      <section id="home-page">
-        <div class="search-filter">
-          <input type="text" id="search-bar" placeholder="Search books..." />
-          <select id="genre-filter">
-            <option value="">All Genres</option>
-            <!-- Additional genre options will be added dynamically -->
-          </select>
-        </div>
-        <div id="book-list" class="book-grid"></div>
-        <div id="pagination"></div>
-      </section>
+    <main class="container">
+      <div class="main-section">
+        <!-- Home Page Section -->
+        <section id="home-page">
+          <div class="search-filter">
+            <input type="text" id="search-bar" placeholder="Search books..." />
+            <select id="genre-filter">
+              <option value="">All Genres</option>
+              <!-- Additional genre options will be added dynamically -->
+            </select>
+          </div>
+          <div id="book-list" class="book-grid"></div>
+          <div id="pagination"></div>
+        </section>
 
-      <!-- Book Details Page Section -->
-      <section id="book-details-page" class="hidden">
-        <div id="book-details"></div>
-        <button id="back-to-list">Back to List</button>
-      </section>
+        <!-- Book Details Page Section -->
+        <section id="book-details-page" class="hidden">
+          <div id="book-details"></div>
+          <button id="back-to-list">Back to Home</button>
+        </section>
 
-      <div id="loading" class="hidden">Loading...</div>
+        <div id="loading" class="hidden">Loading...</div>
+      </div>
     </main>
 
     <footer>
