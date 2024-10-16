@@ -92,17 +92,29 @@ function createBookCard(book) {
     const card = document.createElement('div');
     card.className = 'book-card';
     card.style.cursor = 'pointer';
+
+    // Extract the first genre (if available)
+    const genre = book.subjects.length > 0 ? book.subjects[0] : 'Unknown Genre';
+
     card.innerHTML = `
         <img src="${book.formats['image/jpeg']}" alt="${book.title}" loading="lazy">
         <div class="book-info">
-            <h3>${book.title}</h3>
-            <p>${book.authors[0]?.name || 'Unknown Author'}</p>
+            <div class="book__details">
+            <h3>${book.title.length > 20 ? `${book.title.slice(0, 20)}...` : book.title}</h3>
+            <p><strong>Author:</strong> ${book.authors[0]?.name || 'Unknown Author'}</p>
+            <p><strong>Genre:</strong> ${genre}</p>
+            <p><strong>ID:</strong> ${book.id}</p>
+            </div>
+            <div>
             <button class="wishlist-btn" data-id="${book.id}">
-                ${isInWishlist(book.id) ? '❤️' : '🤍'}
-            </button>
+            ${isInWishlist(book.id) ? '❤️' : '🤍'}
+        </button>
+            </div>
+
         </div>
     `;
 
+    // Add event listeners for wishlist button and card click
     card.querySelector('.wishlist-btn').addEventListener('click', toggleWishlist);
     card.addEventListener('click', (e) => {
         if (!e.target.classList.contains('wishlist-btn')) {
@@ -112,6 +124,7 @@ function createBookCard(book) {
 
     return card;
 }
+
 
 // Show book details
 function showBookDetails(book) {
